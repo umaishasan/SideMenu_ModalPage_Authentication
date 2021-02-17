@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalPagePage } from '../modal-page/modal-page.page';
 
+
 @Component({
   selector: 'app-bbb',
   templateUrl: './bbb.page.html',
@@ -11,8 +12,8 @@ export class BbbPage implements OnInit {
 
   constructor(public modalController: ModalController) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   async presentModal() {
     const modal = await this.modalController.create({
       component: ModalPagePage,
@@ -20,4 +21,5 @@ export class BbbPage implements OnInit {
     });
     return await modal.present();
   }
+
 }
