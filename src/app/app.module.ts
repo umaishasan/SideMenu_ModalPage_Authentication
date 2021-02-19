@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ModalPagePage } from './modal-page/modal-page.page';
 import { BModalPage } from './b-modal/b-modal.page';
 import { CModelPage } from './c-model/c-model.page';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 @NgModule({
   declarations: [AppComponent,ModalPagePage,BModalPage,CModelPage],
@@ -23,6 +24,7 @@ import { CModelPage } from './c-model/c-model.page';
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

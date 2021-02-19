@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CccPageRoutingModule } from './ccc-routing.module';
-
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { CccPage } from './ccc.page';
 
 @NgModule({
@@ -13,6 +13,7 @@ import { CccPage } from './ccc.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    NgxQRCodeModule,
     CccPageRoutingModule
   ],
   declarations: [CccPage]
