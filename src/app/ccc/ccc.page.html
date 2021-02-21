@@ -11,6 +11,5 @@
 <ion-content>
   <ion-input type="text" placeholder="Enter any string" [(ngModel)]="studentID"></ion-input>
   <ion-button expand="full" (click)="randomQRCode()">Create QRcode</ion-button>
-  <ngx-qrcode [value]="qrCode"></ngx-qrcode>
-  <ion-label>Viwe Result: {{encodedData}}</ion-label>
+  <ion-label>Viwe Result: {{qrData}}</ion-label>
 </ion-content>

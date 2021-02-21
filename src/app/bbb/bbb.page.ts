@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { CccPage } from '../ccc/ccc.page';
 import { ModalPagePage } from '../modal-page/modal-page.page';
-
 
 @Component({
   selector: 'app-bbb',
@@ -9,8 +9,12 @@ import { ModalPagePage } from '../modal-page/modal-page.page';
   styleUrls: ['./bbb.page.scss'],
 })
 export class BbbPage implements OnInit {
+qrCode:string;
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, public cc:CccPage) {
+    this.cc.randomQRCode();
+    this.qrCode = this.cc.qrData;
+  }
 
   ngOnInit() {}
 

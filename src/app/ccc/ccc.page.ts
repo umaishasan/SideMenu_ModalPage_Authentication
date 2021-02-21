@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { ModalController } from '@ionic/angular';
 import { ModalPagePage } from '../modal-page/modal-page.page';
 
+@Injectable({
+  providedIn:'any'
+})
 @Component({
   selector: 'app-ccc',
   templateUrl: './ccc.page.html',
@@ -10,10 +14,13 @@ import { ModalPagePage } from '../modal-page/modal-page.page';
 })
 
 export class CccPage implements OnInit {
-  qrCode: string;
   studentID:string;
+  qrData:string;
 
-  constructor(public modalController: ModalController, public brqrCode: BarcodeScanner) { }
+  constructor(
+    public modalController: ModalController, 
+    public brqrCode: BarcodeScanner, 
+    public route: Router) { }
 
   ngOnInit() { }
 
@@ -36,7 +43,9 @@ export class CccPage implements OnInit {
     for (var i = 0; i < 30; i++) {
       storedID += combine.charAt(Math.floor(Math.random()*stringLangth));
     }
-    this.qrCode = storedID+this.studentID;
+    this.qrData = storedID+this.studentID;
+    this.route.navigateByUrl('/bbb');
+
   }
 
 }
