@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'bbb',
+    redirectTo: 'clas',
     pathMatch: 'full'
   },
   {
@@ -50,6 +50,14 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'canvas-print',
+    loadChildren: () => import('./canvas-print/canvas-print.module').then( m => m.CanvasPrintPageModule)
+  },
+  {
+    path: 'clas',
+    loadChildren: () => import('./clas/clas.module').then( m => m.ClasPageModule)
   }
 ];
 

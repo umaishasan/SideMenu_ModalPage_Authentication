@@ -40,11 +40,11 @@ export class CccPage implements OnInit {
     var punctuations = '!@#$%^&*()_+=-][{}|";:/?.><,';
     var combine = upper + lower + noumber + punctuations;
     var stringLangth = combine.length;
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 20; i++) {
       storedID += combine.charAt(Math.floor(Math.random()*stringLangth));
     }
     this.qrData = storedID+this.studentID;
-    this.route.navigateByUrl('/bbb');
+    // this.route.navigateByUrl('/bbb');
 
   }
 

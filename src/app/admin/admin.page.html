@@ -5,5 +5,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-select placeholder="select user" [(ngModel)]="selectuser">
+    <ion-select-option value="stu">Student</ion-select-option>
+    <ion-select-option value="tea">Teacher</ion-select-option>
+  </ion-select>
+  <!-- <ion-input type="text" [(ngModel)]="id" placeholder="Enter id"></ion-input> -->
+  <ion-input type="text" [(ngModel)]="name" placeholder="Enter name"></ion-input>
+  <ion-input type="text" [(ngModel)]="class" placeholder="Enter class"></ion-input>
+  <ion-input type="text" [(ngModel)]="clasid" placeholder="Enter class id"></ion-input>
+  <ion-button (click)="workCheck()">Add</ion-button>
 </ion-content>

@@ -8,12 +8,15 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card>
+
+  <ion-card id="myCard">
     <ion-card-content>
       <ion-label class="forHeading">Smart Schooling Sysytem</ion-label>
-      <ion-avatar>
-        <img src="./assets/download.jpeg" alt="" />
+
+      <ion-avatar class="imgCntr">
+        <img src="./assets/download.jpeg" alt="Avatar" />
       </ion-avatar>
+
       <ion-label class="forLabel">Syed Safdar Hussain</ion-label><br>
       <ion-label class="forLabel">(12345)</ion-label>
       <ion-list>
@@ -27,8 +30,12 @@
           <ion-label>10</ion-label>
         </ion-item>
       </ion-list>
-      <ngx-qrcode [value]="qrCode"></ngx-qrcode>
+      <ngx-qrcode id="qrImg" [value]="qrCode"></ngx-qrcode>
     </ion-card-content>
   </ion-card>
-  <ion-button expand="full">Print</ion-button>
+
+  <div></div>
+
+  <ion-button expand="full" color="secondary" (click)="check()">Download</ion-button>
+
 </ion-content>

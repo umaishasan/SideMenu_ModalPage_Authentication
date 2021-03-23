@@ -13,6 +13,7 @@ import { BModalPage } from './b-modal/b-modal.page';
 import { CModelPage } from './c-model/c-model.page';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
+
 @NgModule({
   declarations: [AppComponent,ModalPagePage,BModalPage,CModelPage],
   entryComponents: [ModalPagePage],
